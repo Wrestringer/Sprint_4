@@ -16,7 +16,7 @@ public class MainPage {
     private final WebDriver webDriver;
 
     private final By topButtonOrder = By.xpath(".//button[@class = 'Button_Button__ra12g']");
-    private final By middleButtonOrder = By.xpath(".//button[@class = 'Button_Button__ra12g Button_UltraBig__UU3Lp']");
+    private final By middleButtonOrder = By.xpath(".//button [contains(@class, 'Button_Button__ra12g Button_UltraBig__UU3Lp')]");
     private final By openQuestionsListFAQ = By.xpath(".//div[@class = 'accordion__heading']");
     private final By hiddenAnswersListFAQ = By.xpath(".//div[@data-accordion-component='AccordionItemPanel']");
 
@@ -35,6 +35,7 @@ public class MainPage {
     }
 
     public MainPage clickMiddleButtonOrder() {
+        ((JavascriptExecutor)webDriver).executeScript("arguments[0].scrollIntoView();", webDriver.findElement(middleButtonOrder));
         webDriver.findElement(middleButtonOrder).click();
         return this;
     }
