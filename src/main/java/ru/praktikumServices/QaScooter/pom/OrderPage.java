@@ -98,8 +98,8 @@ public class OrderPage {
     }
 
 
-    public OrderPage checkSuccessfulCreateOrder() {
-        assertTrue("Сообщения об успешном заказе нет", webDriver.findElement(divMessageOrder).getText().contains("Заказ оформлен"));
+    public OrderPage checkSuccessfulCreateOrder(String orderResult) {
+        assertTrue("Сообщения об успешном заказе нет", webDriver.findElement(divMessageOrder).getText().contains(orderResult));
 
         return this;
     }
