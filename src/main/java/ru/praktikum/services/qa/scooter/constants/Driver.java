@@ -1,4 +1,4 @@
-package ru.praktikumServices.QaScooter.constants;
+package ru.praktikum.services.qa.scooter.constants;
 
 
 public class Driver {

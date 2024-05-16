@@ -1,4 +1,4 @@
-package ru.praktikumServices.QaScooter.pom;
+package ru.praktikum.services.qa.scooter.pom;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
